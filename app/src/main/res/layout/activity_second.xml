@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.earl.rada.labexerno3.Second_Activity">
+
+    <TextView
+        android:id="@+id/displayOne"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/loadInternal"
+        android:layout_alignRight="@+id/loadInternal"
+        android:layout_below="@+id/back"
+        android:layout_marginTop="19dp" />
+
+
+    <Button
+        android:id="@+id/loadShared"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:onClick="sharedPreferences"
+        android:text="Shared Preferences" />
+
+    <Button
+        android:id="@+id/loadInternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loadShared"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:onClick="internalStorage"
+        android:text="Internal Storage" />
+
+    <Button
+        android:id="@+id/internalCache"
+        android:onClick="loadInternalCache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/externalCache"
+        android:layout_alignEnd="@+id/externalCache"
+        android:layout_alignRight="@+id/externalCache"
+        android:text="Internal Cache" />
+
+    <Button
+        android:id="@+id/externalCache"
+        android:onClick="loadExternalCache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/externalStorage"
+        android:layout_centerHorizontal="true"
+        android:text="External Cache" />
+
+    <Button
+        android:id="@+id/externalStorage"
+        android:onClick="loadExternalStorage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="External Storage" />
+
+    <Button
+        android:id="@+id/externalPublic"
+        android:onClick="loadExternalPublic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/displayOne"
+        android:layout_alignStart="@+id/displayOne"
+        android:layout_below="@+id/externalStorage"
+        android:layout_marginTop="33dp"
+        android:text="External Public Storage" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/externalPublic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:onClick="back"
+        android:text="Previous" />
+</RelativeLayout>
